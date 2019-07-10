@@ -43,7 +43,7 @@ Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.
 1- Specify the path to the list of thread-safe and thread-unsafe classes and the path to the target classes you want to analyze in:
 [`src/tsfinder/Config.java`](src/tsfinder/Config.java) and [`python/graph-kernel/Config.py`](python/graph-kernel/Config.py)
 
-2- To build field-focused graphs, first compile the java sources using ``javac -cp lib/sootclasses-trunk-jar-with-dependencies.jar:lib/gs-core-1.3.jar:bin/ -d bin/ `find src/ -name "*.java"```
+2- To build field-focused graphs, first compile the java sources using `javac -cp lib/sootclasses-trunk-jar-with-dependencies.jar:lib/gs-core-1.3.jar:bin/ -d bin/ `find src/ -name "*.java"``
 
 3- Now, run the following command to generate field-focused graphs `java -cp bin/:lib/sootclasses-trunk-jar-with-dependencies.jar:lib/jdk-8u152-linux-x64/jdk1.8.0_152/:lib/gs-core-1.3.jar tsfinder.graphs.GraphsBuilder`
 
