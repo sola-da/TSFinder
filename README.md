@@ -32,12 +32,14 @@ Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.
 - [`lib`](lib) has third-party java libs such as soot, gs-core, and weka.
 	
 ### Data:
-- [`benchmark/`](benchmark) has the lists of thread-safe and thread-unsafe classes used in the ASE2019 paper. It also has the jdk_rt.jar
-- [`benchmark/ase2018/`](benchmark/ase2018) has the weka experiments configuration file and the results file from weka will be saved there.
-- [`output/`](output) is created after running the experiment script or explicitly calling the individual components of TSFinder. It includes the vectors generated for the baseline, the generated field-focused graphs, computed graph-kernels and associated meta-data; and the vectors representing classes based on the summary of the graph-kernel.  
+- [`benchmark`](benchmark) has the lists of thread-safe and thread-unsafe classes used in the ASE2019 paper. It also has the jdk_rt.jar
+- [`benchmark/ase2018`](benchmark/ase2018) has the weka experiments configuration file and the results file from weka will be saved there.
+- [`output`](output) is created after running the experiment script or explicitly calling the individual components of TSFinder. It includes the vectors generated for the baseline, the generated field-focused graphs, computed graph-kernels and associated meta-data; and the vectors representing classes based on the summary of the graph-kernel.  
+
 
 ## Using TSFinderr
-### I) Supervised training: 
+
+### I) Supervised training 
 1- Specify the path to the list of thread-safe and thread-unsafe classes and the path to the target classes you want to analyze in:
 [`src/tsfinder/Config.java`](src/tsfinder/Config.java) and [`python/graph-kernel/Config.py`](python/graph-kernel/Config.py)
 
