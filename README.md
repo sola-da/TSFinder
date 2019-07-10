@@ -34,7 +34,7 @@ Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.
 ### Data:
 - [`benchmark`](benchmark) has the lists of thread-safe and thread-unsafe classes used in the ASE2019 paper. It also has the jdk_rt.jar
 - [`benchmark/ase2018`](benchmark/ase2018) has the weka experiments configuration file and the results file from weka will be saved there.
-- [`output`](output) is created after running the experiment script or explicitly calling the individual components of TSFinder. It includes the vectors generated for the baseline, the generated field-focused graphs, computed graph-kernels and associated meta-data; and the vectors representing classes based on the summary of the graph-kernel.  
+- `output` is created after running the experiment script or explicitly calling the individual components of TSFinder. It includes the vectors generated for the baseline, the generated field-focused graphs, computed graph-kernels and associated meta-data; and the vectors representing classes based on the summary of the graph-kernel.  
 
 
 ## Using TSFinderr
@@ -43,7 +43,8 @@ Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.
 1- Specify the path to the list of thread-safe and thread-unsafe classes and the path to the target classes you want to analyze in:
 [`src/tsfinder/Config.java`](src/tsfinder/Config.java) and [`python/graph-kernel/Config.py`](python/graph-kernel/Config.py)
 
-2- To build field-focused graphs, first compile the java sources using `javac -cp lib/sootclasses-trunk-jar-with-dependencies.jar:lib/gs-core-1.3.jar:bin/ -d bin/ `find src/ -name "*.java"``:
+2- To build field-focused graphs, first compile the java sources using ``javac -cp lib/sootclasses-trunk-jar-with-dependencies.jar:lib/gs-core-1.3.jar:bin/ -d bin/ `find src/ -name "*.java"```
+
 3- Now, run the following command to generate field-focused graphs `java -cp bin/:lib/sootclasses-trunk-jar-with-dependencies.jar:lib/jdk-8u152-linux-x64/jdk1.8.0_152/:lib/gs-core-1.3.jar tsfinder.graphs.GraphsBuilder`
 
 4- To compute the WL graph-kernel of field-focused graphs and obtain a vector per-class, run `python3 python/graph-kernel/WLCompute.py --corpus output/graphs_raw/ --h 7` 
