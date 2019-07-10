@@ -21,15 +21,15 @@ This repository contains the source code of TSFinder along with data scripts req
 ## Reproducing ASE2018 results
 
 Reproducing our ASE2018 results is almost fully automated. 
-Run the shell script [`./scripts/runASEexperiments.sh`](scripts/runASEexperiments.sh) and then follow on-screen instructions.
+Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.sh) and then follow on-screen instructions.
 
 
 ## Repository structure
 
 ### Source code and 3rd party libs:
-- [`src/`](src) has the java files for running soot to extract baseline data as well as to build field-focused graphs.
-- [`python/graph-kernel/`](python/graph-kernel/) has python scripts to compute the WL-graph kernel and produce a single vector per class.
-- [`lib/`](lib) has third-party java libs such as soot, gs-core, and weka.
+- [`src`](src) has the java files for running soot to extract baseline data as well as to build field-focused graphs.
+- [`python/graph-kernel`](python/graph-kernel/) has python scripts to compute the WL-graph kernel and produce a single vector per class.
+- [`lib`](lib) has third-party java libs such as soot, gs-core, and weka.
 	
 ### Data:
 - [`benchmark/`](benchmark) has the lists of thread-safe and thread-unsafe classes used in the ASE2019 paper. It also has the jdk_rt.jar
@@ -46,7 +46,7 @@ Run the shell script [`./scripts/runASEexperiments.sh`](scripts/runASEexperiment
 
 4- To compute the WL graph-kernel of field-focused graphs and obtain a vector per-class, run `python3 python/graph-kernel/WLCompute.py --corpus output/graphs_raw/ --h 7` 
 
-5- Run weka through `java -jar lib/weka.jar` and load the classes vectors file from `output/graphs_vectors/`
+5- Run weka through `java -jar lib/weka.jar` and load the classes vectors file from `output/graphs_vectors`.
 
 ### II) Classifying a new class
 	coming soon ...
