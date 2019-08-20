@@ -37,7 +37,7 @@ Run the shell script [`scripts/runASEexperiments.sh`](scripts/runASEexperiments.
 - `output` is created after running the experiment script or explicitly calling the individual components of TSFinder. It includes the vectors generated for the baseline, the generated field-focused graphs, computed graph-kernels and associated meta-data; and the vectors representing classes based on the summary of the graph-kernel.  
 
 
-## Using TSFinderr
+## Using TSFinder
 
 ### I) Supervised training 
 1- Specify the path to the list of thread-safe and thread-unsafe classes and the path to the target classes you want to analyze in:
